@@ -63,7 +63,7 @@ Follow the [main golden path](./dokploy-deployment-guide.md#2-the-compose-deploy
 5. Poll: composeStatus running → done   (watch the deploy log; pull takes a while)
 6. Verify:
      docker ps --filter name=agent-zero          # Up, 0.0.0.0:50080->80/tcp
-     curl -s -o /dev/null -w "%{http_code}" http://localhost:50080/   # 200
+     curl -s -o /dev/null -w "%{http_code}" http://<HOST>:50080/   # 200
 ```
 
 The deploy log will show layer extraction (`Extracting ...MB`) during the long pull, then:
@@ -78,7 +78,7 @@ Deliberately **do not bake API keys into the compose file.** Configure them in t
 on first launch — they persist in the `/a0` volume, keep secrets out of YAML, and sidestep
 env-propagation quirks:
 
-1. Open the web UI (`http://localhost:50080`, or via your private overlay network).
+1. Open the web UI (`http://<HOST>:50080`, or via your private overlay network).
 2. **Settings → model / API keys.**
 3. Choose your model provider. Pick a provider you trust for the work you'll feed it —
    Agent Zero executes code and accumulates context across sessions.

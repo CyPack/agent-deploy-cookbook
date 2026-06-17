@@ -21,9 +21,10 @@ Replace these with your own values everywhere they appear:
 
 | Placeholder | Meaning |
 |-------------|---------|
-| `<DOKPLOY_URL>` | Your Dokploy base URL (default `http://localhost:3000`) |
+| `<DOKPLOY_URL>` | Your Dokploy base URL |
 | `<DOKPLOY_API_KEY>` | API token from Dokploy → Settings → API |
-| `<HOST_LAN_IP>` | Your server's LAN IP (e.g. `192.168.x.x`) |
+| `<HOST_LAN_IP>` | Your server's LAN IP |
+| `<HOST>` | The host/address where a service is reachable |
 | `<SERVER_PUBLIC_IP>` | Your server's public IP |
 | `<APP_DOMAIN>` | The domain you point at the service (e.g. `app.example.com`) |
 | `<COMPOSE_ID>` / `<PROJECT_ID>` / `<ENV_ID>` | IDs returned by Dokploy when you create resources |
